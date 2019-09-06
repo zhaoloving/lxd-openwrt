@@ -3,7 +3,7 @@ FROM debian:stable-slim as builder
 WORKDIR /root/
 
 RUN apt-get update
-RUN apt-get -y --no-install-recommends install build-essential subversion fakeroot gawk gpg git wget ca-certificates
+RUN apt-get -y --no-install-recommends install build-essential subversion fakeroot gawk gpg git wget ca-certificates libncurses-dev unzip python3 file
 
 RUN git clone https://github.com/mikma/lxd-openwrt.git
 
